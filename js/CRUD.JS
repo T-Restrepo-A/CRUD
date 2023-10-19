@@ -40,7 +40,14 @@ export class CRUD{
     return this.#data;
     }
 
-    
+    update(id, data){
+        this.#data[id] = data;
+        this.#checkThatElementExistsWithId(id);
+        this.#save();
+        return true;
+    }
+
+
 
 
     #save(){
