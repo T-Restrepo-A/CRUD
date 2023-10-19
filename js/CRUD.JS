@@ -48,6 +48,13 @@ export class CRUD{
     }
 
 
+    delete(id){
+        this.#data.splice(id, 1);
+        this.#checkThatElementExistsWithId(id);
+        this.#save();
+        return true;
+
+    }
 
 
     #save(){
