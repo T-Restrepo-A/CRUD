@@ -24,7 +24,14 @@ export class CRUD{
 	}
 
 
+    create(data){
+        this.#data.push(data);
+        this.#save();
+        return this.#data.length;
+    }
 
+
+   
 
 
     #save(){
